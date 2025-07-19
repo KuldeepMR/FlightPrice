@@ -1,94 +1,94 @@
-1. Problem Statement
+**1. Problem Statement**
 Airfare prices fluctuate due to a variety of dynamic factors like travel dates, airline carriers, stops, duration, and source/destination cities. The aim of this project is to build a machine learning model that accurately predicts the price of flight tickets based on these variables, allowing users to plan their journeys efficiently and affordably.
 
-2.  Dataset Overview
+**2.  Dataset Overview**
 Source: Kaggle – Flight Fare Prediction Dataset
 
 Size: ~10,000 rows
 
 Target Variable: Price
 
-Key Features:
-Feature	Description
-Airline	Name of the airline
-Date_of_Journey	Date of the journey
-Source	City from where the flight departs
-Destination	City where the flight lands
-Route	Flight route
-Dep_Time	Departure time
-Arrival_Time	Arrival time
-Duration	Total travel time
-Total_Stops	Number of stops in the journey
-Additional_Info	Misc info about flight (e.g., no info)
-Price	Flight ticket price (Target variable)
+_Key Features:_
+Feature	Description <br/>
+Airline	Name of the airline<br/>
+Date_of_Journey	Date of the journey <br/>
+Source	City from where the flight departs<br/>
+Destination	City where the flight lands<br/>
+Route	Flight route<br/>
+Dep_Time	Departure time<br/>
+Arrival_Time	Arrival time<br/>
+Duration	Total travel time<br/>
+Total_Stops	Number of stops in the journey<br/>
+Additional_Info	Misc info about flight (e.g., no info)<br/>
+Price	Flight ticket price (Target variable)<br/>
 
-3.  Exploratory Data Analysis (EDA)
-Key insights from the data:
+**3.  Exploratory Data Analysis (EDA)**
+Key insights from the data:<br/>
 
-Airlines like Jet Airways have higher average prices.
+Airlines like Jet Airways have higher average prices.<br/>
 
-Non-stop flights are more expensive than flights with stops.
+Non-stop flights are more expensive than flights with stops.<br/>
 
-Flight prices are influenced by duration and departure time.
+Flight prices are influenced by duration and departure time.<br/>
 
-No strong correlation with Additional_Info.
+No strong correlation with Additional_Info.<br/>
 
-Data Cleaning Done:
+Data Cleaning Done:<br/>
 
-Removed missing values
+Removed missing values<br/>
 
-Parsed and split date/time fields
+Parsed and split date/time fields<br/>
 
-Cleaned inconsistent duration formats
+Cleaned inconsistent duration formats<br/>
 
-4.  Feature Engineering
-Extracted:
+**4.  Feature Engineering**
+Extracted:<br/>
 
-Journey_Day, Journey_Month from Date_of_Journey
+Journey_Day, Journey_Month from Date_of_Journey<br/>
 
-Dep_Hour, Dep_Min from Dep_Time
+Dep_Hour, Dep_Min from Dep_Time<br/>
 
-Arrival_Hour, Arrival_Min from Arrival_Time
+Arrival_Hour, Arrival_Min from Arrival_Time<br/>
 
-Converted Duration into numeric hours and minutes
+Converted Duration into numeric hours and minutes<br/>
 
-Used Label Encoding and One-Hot Encoding for categorical columns:
+Used Label Encoding and One-Hot Encoding for categorical columns:<br/>
 
-Airline, Source, Destination, Total_Stops
+Airline, Source, Destination, Total_Stops<br/>
 
-Final feature set included ~30 columns after transformation.
+Final feature set included ~30 columns after transformation.<br/>
 
-5.  Model Building & Evaluation
-Algorithms Tested:
-a. Linear Regression
-b. Decision Tree Regressor
-c. Random Forest Regressor
-d. Redge Regression
-e. Lasso Regression
-f. GradientBoosting Regressor
-g. ExtremeGradientBoosting Regressor
-h. AdaBoosting Regressor	
+**5.  Model Building & Evaluation**<br/>
+Algorithms Tested:<br/>
+a. Linear Regression<br/>
+b. Decision Tree Regressor<br/>
+c. Random Forest Regressor<br/>
+d. Redge Regression<br/>
+e. Lasso Regression<br/>
+f. GradientBoosting Regressor<br/>
+g. ExtremeGradientBoosting Regressor<br/>
+h. AdaBoosting Regressor	<br/>
 
-Evaluation Metrics:
-MAE (Mean Absolute Error)
+_Evaluation Metrics:_
+MAE (Mean Absolute Error)<br/>
 
-RMSE (Root Mean Squared Error)
+RMSE (Root Mean Squared Error)<br/>
 
-R² Score
+R² Score<br/>
 
-Best Model: ExtremeGradientBoosting Regressor
+_Best Model: ExtremeGradientBoosting Regressor_<br/>
 
 
-6.  Deployment
-Developed a simple Flask web app
+**6.  Deployment**
+Developed a simple Flask web app<br/>
 
-Inputs: User fills in flight details
+Inputs: User fills in flight details<br/>
 
-Output: Predicted flight fare shown in real-time
+Output: Predicted flight fare shown in real-time<br/>
 
-7. Business Impact
-Enables budget-friendly travel planning
+**7. Business Impact**
+Enables budget-friendly travel planning<br/>
 
-Can be used by OTAs like MakeMyTrip, Cleartrip for pricing strategies
+Can be used by OTAs like MakeMyTrip, Cleartrip for pricing strategies<br/>
 
-Helps airlines optimize dynamic pricing models
+Helps airlines optimize dynamic pricing models<br/>
