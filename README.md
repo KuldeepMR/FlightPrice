@@ -1,7 +1,7 @@
-1. 🎯 Problem Statement
+1. Problem Statement
 Airfare prices fluctuate due to a variety of dynamic factors like travel dates, airline carriers, stops, duration, and source/destination cities. The aim of this project is to build a machine learning model that accurately predicts the price of flight tickets based on these variables, allowing users to plan their journeys efficiently and affordably.
 
-2. 📊 Dataset Overview
+2.  Dataset Overview
 Source: Kaggle – Flight Fare Prediction Dataset
 
 Size: ~10,000 rows
@@ -22,7 +22,7 @@ Total_Stops	Number of stops in the journey
 Additional_Info	Misc info about flight (e.g., no info)
 Price	Flight ticket price (Target variable)
 
-3. 📈 Exploratory Data Analysis (EDA)
+3.  Exploratory Data Analysis (EDA)
 Key insights from the data:
 
 Airlines like Jet Airways have higher average prices.
@@ -41,7 +41,7 @@ Parsed and split date/time fields
 
 Cleaned inconsistent duration formats
 
-4. 🛠 Feature Engineering
+4.  Feature Engineering
 Extracted:
 
 Journey_Day, Journey_Month from Date_of_Journey
@@ -58,15 +58,16 @@ Airline, Source, Destination, Total_Stops
 
 Final feature set included ~30 columns after transformation.
 
-5. 🧠 Model Building & Evaluation
+5.  Model Building & Evaluation
 Algorithms Tested:
-Linear Regression
-
-Decision Tree Regressor
-
-Random Forest Regressor
-
-XGBoost Regressor
+a. Linear Regression
+b. Decision Tree Regressor
+c. Random Forest Regressor
+d. Redge Regression
+e. Lasso Regression
+f. GradientBoosting Regressor
+g. ExtremeGradientBoosting Regressor
+h. AdaBoosting Regressor	
 
 Evaluation Metrics:
 MAE (Mean Absolute Error)
@@ -75,16 +76,19 @@ RMSE (Root Mean Squared Error)
 
 R² Score
 
-🔥 Best Model: Random Forest Regressor
-Model	R² Score	RMSE
-Linear Regression	0.61	~4200
-Decision Tree	0.85	~2500
-Random Forest	0.91	1900
-XGBoost	0.89	~2000
+Best Model: ExtremeGradientBoosting Regressor
 
-6. 🖥 Deployment
+
+6.  Deployment
 Developed a simple Flask web app
 
 Inputs: User fills in flight details
 
 Output: Predicted flight fare shown in real-time
+
+7. Business Impact
+Enables budget-friendly travel planning
+
+Can be used by OTAs like MakeMyTrip, Cleartrip for pricing strategies
+
+Helps airlines optimize dynamic pricing models
