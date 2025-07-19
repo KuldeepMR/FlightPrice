@@ -1,14 +1,13 @@
-**1. Problem Statement**
+**1. Problem Statement**<br/>
 Airfare prices fluctuate due to a variety of dynamic factors like travel dates, airline carriers, stops, duration, and source/destination cities. The aim of this project is to build a machine learning model that accurately predicts the price of flight tickets based on these variables, allowing users to plan their journeys efficiently and affordably.
 
-**2.  Dataset Overview**
+**2.  Dataset Overview**<br/>
 Source: Kaggle – Flight Fare Prediction Dataset
 
 Size: ~10,000 rows
 
-Target Variable: Price
-
-_Key Features:_
+_Target Variable: Price_
+_Key Features:_<br/>
 Feature	Description <br/>
 Airline	Name of the airline<br/>
 Date_of_Journey	Date of the journey <br/>
@@ -22,7 +21,7 @@ Total_Stops	Number of stops in the journey<br/>
 Additional_Info	Misc info about flight (e.g., no info)<br/>
 Price	Flight ticket price (Target variable)<br/>
 
-**3.  Exploratory Data Analysis (EDA)**
+**3.  Exploratory Data Analysis (EDA)**<br/>
 Key insights from the data:<br/>
 
 Airlines like Jet Airways have higher average prices.<br/>
@@ -41,7 +40,7 @@ Parsed and split date/time fields<br/>
 
 Cleaned inconsistent duration formats<br/>
 
-**4.  Feature Engineering**
+**4.  Feature Engineering**<br/>
 Extracted:<br/>
 
 Journey_Day, Journey_Month from Date_of_Journey<br/>
@@ -69,7 +68,7 @@ f. GradientBoosting Regressor<br/>
 g. ExtremeGradientBoosting Regressor<br/>
 h. AdaBoosting Regressor	<br/>
 
-_Evaluation Metrics:_
+_Evaluation Metrics:_<br/>
 MAE (Mean Absolute Error)<br/>
 
 RMSE (Root Mean Squared Error)<br/>
@@ -79,14 +78,14 @@ R² Score<br/>
 _Best Model: ExtremeGradientBoosting Regressor_<br/>
 
 
-**6.  Deployment**
+**6.  Deployment**<br/>
 Developed a simple Flask web app<br/>
 
 Inputs: User fills in flight details<br/>
 
 Output: Predicted flight fare shown in real-time<br/>
 
-**7. Business Impact**
+**7. Business Impact**<br/>
 Enables budget-friendly travel planning<br/>
 
 Can be used by OTAs like MakeMyTrip, Cleartrip for pricing strategies<br/>
